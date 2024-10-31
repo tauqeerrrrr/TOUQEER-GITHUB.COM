@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Touqeer Hasan Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">TOUQEER HASAN</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvB-UPCr0hMDWNzN_tznbPITLS0tg-V1tE6w&s);">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>TOUQEER HASAN</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'CS STUDENT  ',
+						
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h2>Learning OF DATA Analytics</h2>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <!-- <p><a href="https://www.youtube.com/@RishabhMishraOfficial" class="btn btn-primary py-3 px-4">YouTube</a>  -->
+							<a href="https://github.com/tauqeerrrrr" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="data:image/jpeg;base64,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" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>TOUWEER HASAN</span></p>
+										<p><span class="title-s">CS STUDENT: </span> <span></span></p>
+										<!-- <p><span class="title-s">Experience: </span> <span>5 Years 3 Months</span></p> -->
+										<p><span class="title-s">Address: </span> <span>Moradabad, India</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>SQL</span> <span class="pull-right">60%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>PYTHON</span> <span class="pull-right">65%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Data Visualization</span> <span class="pull-right">70%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Statistical Analysis</span> <span class="pull-right">50%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Machine Learning</span> <span class="pull-right">50%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>Hello! I am a BCA student with a keen interest in data analytics. Currently, I am enhancing my skills in Python, Power BI, Excel, and SQL. I am passionate about uncovering insights from data to help businesses make informed decisions.
+
+									In my studies, I have worked on various projects where I applied data analysis techniques to solve real-world problems. I enjoy learning new tools and techniques, and I am excited about exploring the vast field of data analytics further..</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>learning  Data Analytics</span></li>
+									<!-- <li class="d-flex"><span>Domain:</span> <span>Retail, Ecommerce, BFSI &amp; Digital Marketing</span></li> -->
+									<li class="d-flex"><span>Education:</span> <span>Bachelor of computer application</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Hindi</span></li>
+									<li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI</span></li>
+									<li class="d-flex"><span>Other Skills:</span> <span> Excel</span></li>
+									<li class="d-flex"><span>Interest:</span> <span>Traveling, cricket</span></li>
+									
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="6">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p><a href="https://www.linkedin.com/in/tauqeer-hasan-7285302a5/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BRGd47B5BSd67kSAAhgUiLQ%3D%3D" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p> Touqeer Hasan
+				 Anwla ghat 
+				  Moradabad, utter predesh,
+				 9568867598
+				 royalsaikh650@gmail.com
+			 Bachelors degree in  Passionate about data analysis and visualization, seeking to leverage strong analytical skills in a data analytics role to drive business insights and decision-making.
+				
+		Education
+				Bachelor of computer application
+				Chaudhary Charan Singh University, Meerut utter predesh,
+				Relevant Coursework: Data Mining, Statistical Analysis, Machine Learning, Database Management, Data Visualization
+				Technical Skills
+				Programming Languages: Python, SQL
+				Data Visualization Tools: Power BI, Matplotlib
+				Data Analysis Tools: Excel, Pandas, NumPy
+				Database Management: MySQL
+			
+				
+				  </p>
+          </div>
+        </div>
+
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">fresher</span>
+						<!-- <h2>Senior Data Analyst</h2> -->
+						<!-- <span class="position">Merkle</span> -->
+						<!-- <p class="mt-4">Merkle, a leading CXM and media company with over 10K+ professionals globally. It's a part of Dentsu International.  -->
+							<ul>
+								<!-- <li>Analysed ad campaigns, clickstream, and customer surveys data, identified an increasing demand and launched a strategic product line.</li> -->
+								<!-- <li>Developed time series forecasting models to predict sales and optimize marketing budgets, got model performance of 92%.</li> -->
+								<!-- <li>Designed and executed A/B tests, performed rigorous statistical analysis. Led to 20% MoM increase in the conversion rate.</li> -->
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<!-- <span class="date">2018-2021</span> -->
+						<h2>i am learner</h2>
+						<!-- <span class="position">iQuanti</span> -->
+						<!-- <p class="mt-4">iQuanti is a data-driven digital marketing analytics and solutions company, helps top 100 global brands.  -->
+							<ul>
+								<!-- <li>Performed in-depth market research and analysis to create online pages. Resulted in ~100% website growth and 30% increase in conversion rate YoY.</li> -->
+								<!-- <li>Delivered multiple training and mentorship sessions on analytical tools like SQL, MS Excel, Power BI, Tableau and Python.</li> -->
+								<!-- <li>Performed migration and enhancements for merchandising dashboard, involved data integration and its feature improvement.</li> -->
+							</ul>
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+		<br>
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2023-2026</span>
+    					<h2>Bachelor of computer application</h2>
+    					<span class="position">choudhry charan sigh university meerut</span>
+    					<p class="mt-4">Grade: First class distinction.</p>
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2022-2023</span>
+    					<h2>mohd ataul haq memoriyal inter college hameerpur </h2>
+    					<span class="position">mohd ataul haq memoriyal inter college hameerpur</span>
+    					<p class="mt-4">Grade: First class distinction.</p>
+    				</div>
+				</div>
+    		</div>
+
+    		<div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="#" class="btn btn-primary py-4 px-5">Download CV</a></p>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+   
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Below are the sample Data Analytics projects on SQL, Python, Power BI & ML.</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/tauqeerrrrr/SQL-REPOSITORY" class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/tauqee/rrrrr/python/blob/main/hasan_repositry.ipynb">Digital Music Store Data Analysis using SQL</a></h3>
+                <p>Analyzed music store data using advanced SQL queires to identify gaps and increase the business growth.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/tauqeerrrrr/Power-B/I-Desktop/blob/main/proj_3.jpg" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/tauqeerrrrr/python">Data Analysis using Python Project for Beginners</a></h3>
+                <p>Performed exploratory data analysis on diwali sales data using Python to improve the customer experience.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://github.com/rishabhnmishra/Madhav_Store_Analysis_PowerBI/blob/main/Madhav%20Store%20dashboard.jpg" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/tauqeerrrrr/Power-BI-Desktop/blob/main/proj_3.jpg">Power BI Sales dashboard Project for Beginners</a></h3>
+                <p>Designed a power bi dashboard for Madhav Store to track and analyze the online sales data acorss India.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+	<br>
+		<!-- added justify-content-center to center align the last two projects -->
+		<div class="row d-flex justify-content-center">  
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<!-- <a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');"> -->
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <!-- <h3 class="heading"><a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main">Sales Forecast- Time Series Forecasting</a></h3> -->
+				  <p>Used multiple machine learning models to forecast sales (retail store) and performed time series analysis.</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<!-- <a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');"> -->
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <!-- <h3 class="heading"><a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb">Customer Segmentation using clustering model</a></h3> -->
+				  <p>Developed a ML model to give various recommendations of financial products &amp; services on target customer groups.</p>
+				</div>
+			  </div>
+			</div>
+		 </div>
+	  </div>
+    </section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+		<div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="3">0</strong>
+                <span>Achievements</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="6">0</strong>
+                <span>Projects</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <!-- <strong class="number" data-number="1000">0</strong> -->
+                <!-- <span>Mentored Students</span> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <!-- <div class="block-18">
+              <div class="text">
+                <!-- <strong class="number" data-number="500">0</strong> -->
+                <!-- <span>Cups of coffee</span> -->
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+	
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<!-- <div class="container"> -->
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>More projects on<span> Github  </span> </h2>
+						<div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
+						<br>
+						<p><a href="https://github.com/tauqeerrrrr" class="btn btn-primary py-3 px-5">GitHub</a></p>
+						</div>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Moradabad, India</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://0101010101">+91 9568867598</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:info@yoursite.com">royalsaikh650@gamil.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download Resume</h3>
+	            <p><a href="#">resumelink</a></p>
+	          </div>
+          </div>
+
+		  <div class="container">
+			<br>
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<!-- <h2>Have a<span> Question?  </span> <a href="https://forms.gle/uLaTShUKXraAvHJ77" class="btn btn-primary py-3 px-5">Click Here</a> </h2> -->
+				</div>
+			</div>
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					  <!-- <li class="ftco-animate"><a href="https://www.youtube.com/@RishabhMishraOfficial"><span class="icon-youtube"></span></a></li> -->
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/tauqeer-hasan-7285302a5/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BRGd47B5BSd67kSAAhgUiLQ%3D%3D"><span class="icon-linkedin"></span></a></li>  
+					  <!-- <li class="ftco-animate"><a href="https://twitter.com/rishabhnmishra"><span class="icon-twitter"></span></a></li> -->
+					  <li class="ftco-animate"><a href="https://www.facebook.com/md.you.5268750"><span class="icon-facebook"></span></a></li>
+				      <li class="ftco-animate"><a href="https://www.instagram.com/"><span class="icon-instagram"></span></a></li>
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
